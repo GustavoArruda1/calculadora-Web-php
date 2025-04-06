@@ -14,7 +14,6 @@
     
     $result = '';
     $resultadoFinal = '';
-    session_start();
 
     if (isset($_POST['acao'])) {
         if (is_numeric($_POST['num1']) && is_numeric($_POST['num2'])) {
@@ -79,7 +78,7 @@
                 <div class="opr">
                     <label for="3">Selecione a operação</label>
                     <select name="operacao" id="3">
-                        <option name="+" <?php if (isset($_POST['operacao']) && $_POST['operacao']=='+' )
+                        <option name="+" value="+" <?php if (isset($_POST['operacao']) && $_POST['operacao']=='+' )
                             echo 'selected' ; ?>>Adição (+)</option>
                         <option value="-" <?php if (isset($_POST['operacao']) && $_POST['operacao']=='-' )
                             echo 'selected' ; ?>>Subtração (-)</option>
